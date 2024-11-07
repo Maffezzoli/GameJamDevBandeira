@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1auf6j165hdp"]
+
+[ext_resource type="PackedScene" uid="uid://citkbm27uledr" path="res://Itens/generic_item.tscn" id="1_uxxou"]
+[ext_resource type="Script" path="res://maca_dourada.gd" id="2_25pjy"]
+[ext_resource type="Texture2D" uid="uid://cx6huvp1vt28j" path="res://Assets/Itens/maca_dourada.png" id="3_in717"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_77hvy"]
+radius = 21.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7cpvr"]
+radius = 35.0
+
+[sub_resource type="Gradient" id="Gradient_j28wh"]
+offsets = PackedFloat32Array(0, 0.758721)
+colors = PackedColorArray(1, 0.893652, 0.64531, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2ym30"]
+gradient = SubResource("Gradient_j28wh")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.521368, 0.517094)
+fill_to = Vector2(0.850427, 0.15812)
+
+[node name="MacaDourada" instance=ExtResource("1_uxxou")]
+script = ExtResource("2_25pjy")
+pos_text = Vector2(-154, -60)
+name_ = "MacaDourada"
+current_texture = ExtResource("3_in717")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_in717")
+offset = Vector2(-320, -60)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_77hvy")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_7cpvr")
+
+[node name="Label" parent="." index="3"]
+offset_left = -63.0
+offset_top = -58.0
+offset_right = 63.0
+offset_bottom = -35.0
+text = "Maça Dourada"
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="4"]
+energy = 10.0
+texture = SubResource("GradientTexture2D_2ym30")
+texture_scale = 3.2

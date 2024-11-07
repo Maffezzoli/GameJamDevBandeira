@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://4im5oxvqfk53"]
+
+[ext_resource type="Script" path="res://generic_build.gd" id="1_f5nt3"]
+
+[node name="Sprite2D" type="Sprite2D"]
+script = ExtResource("1_f5nt3")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

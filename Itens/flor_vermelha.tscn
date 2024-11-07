@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://doomil7ubfpi1"]
+
+[ext_resource type="PackedScene" uid="uid://citkbm27uledr" path="res://Itens/generic_item.tscn" id="1_2n8t0"]
+[ext_resource type="Script" path="res://Itens/flor_vermelhaa.gd" id="2_lgka7"]
+[ext_resource type="Texture2D" uid="uid://dsdr6mob1jrhi" path="res://Assets/Scenario/flor_vermelha.png" id="3_lmujx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24u4g"]
+size = Vector2(20, 55)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylqfs"]
+radius = 41.1947
+
+[sub_resource type="Gradient" id="Gradient_msexs"]
+offsets = PackedFloat32Array(0, 0.72093)
+colors = PackedColorArray(1, 0, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a5d5y"]
+gradient = SubResource("Gradient_msexs")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.521368, 0.517094)
+fill_to = Vector2(0.846154, 0.132479)
+
+[node name="GenericItem" instance=ExtResource("1_2n8t0")]
+script = ExtResource("2_lgka7")
+pos_text = Vector2(-132, -110)
+name_ = "PetalaDeEspinho"
+current_texture = ExtResource("3_lmujx")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_lmujx")
+offset = Vector2(-148, -424)
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_24u4g")
+
+[node name="Area2D" parent="." index="2"]
+visible = false
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_ylqfs")
+
+[node name="Label" parent="." index="3"]
+offset_left = -73.0
+offset_top = -49.0
+offset_right = 74.0
+offset_bottom = -26.0
+text = "Pétalas De Espinho"
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="4"]
+energy = 10.0
+texture = SubResource("GradientTexture2D_a5d5y")
+texture_scale = 4.0

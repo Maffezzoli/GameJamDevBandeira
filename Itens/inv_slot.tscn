@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://p2lqf7ocupvj"]
+
+[ext_resource type="Script" path="res://slot.gd" id="1_dbch6"]
+[ext_resource type="Texture2D" uid="uid://v5i55ijwfbgu" path="res://Assets/Itens/chave.png" id="2_a3co3"]
+
+[node name="InvSlot" type="Panel"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_dbch6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 1.0
+offset_right = 321.0
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_a3co3")
+expand_mode = 2
+stretch_mode = 4

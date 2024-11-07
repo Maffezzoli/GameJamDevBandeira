@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4qsp1tmksdsf"]
+
+[ext_resource type="PackedScene" uid="uid://rdwqdn7wcq3j" path="res://action_options.tscn" id="1_haaoe"]
+[ext_resource type="Script" path="res://itens_options.gd" id="2_51vyb"]
+
+[node name="ItemList" instance=ExtResource("1_haaoe")]
+item_0/text = "1. Pegar"
+script = ExtResource("2_51vyb")

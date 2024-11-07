@@ -1,0 +1,127 @@
+[gd_scene load_steps=15 format=3 uid="uid://cwhklr3sc0sty"]
+
+[ext_resource type="Script" path="res://macieira.gd" id="1_02bpe"]
+[ext_resource type="Texture2D" uid="uid://bpscg467h1e08" path="res://Assets/Scenario/macieira.png" id="1_b63tu"]
+[ext_resource type="Texture2D" uid="uid://jqqvtxnpqrr" path="res://Assets/Scenario/folha.png" id="4_wk026"]
+[ext_resource type="AudioStream" uid="uid://g7l7uchxgsq0" path="res://Assets/Audio/GrassRip2.ogg" id="5_cb117"]
+[ext_resource type="Texture2D" uid="uid://dom4wv565dvbt" path="res://Assets/Itens/maca_arvore.png" id="5_hepcy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ukfo"]
+radius = 180.0
+height = 362.0
+
+[sub_resource type="Animation" id="Animation_k4mld"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_pwmym"]
+resource_name = "action"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.0349066, 0.0523599, -0.0523599, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjlal"]
+_data = {
+"RESET": SubResource("Animation_k4mld"),
+"action": SubResource("Animation_pwmym")
+}
+
+[sub_resource type="Gradient" id="Gradient_fysqo"]
+offsets = PackedFloat32Array(0.00529101, 0.322751, 0.650794, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ag4sg"]
+gradient = SubResource("Gradient_fysqo")
+
+[sub_resource type="Curve" id="Curve_f5v1p"]
+_data = [Vector2(0, 0.021978), 0.0, 0.0, 0, 0, Vector2(0.529954, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.054945), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_md01q"]
+curve_x = SubResource("Curve_f5v1p")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dthqj"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(180, 180, 1)
+angle_min = -45.0
+angle_max = 1.07288e-05
+spread = 0.0
+directional_velocity_min = 0.999984
+directional_velocity_max = 103.45
+directional_velocity_curve = SubResource("CurveXYZTexture_md01q")
+gravity = Vector3(0, 98, 0)
+scale_min = 0.1
+scale_max = 0.1
+color_ramp = SubResource("GradientTexture1D_ag4sg")
+
+[node name="Macieira" type="StaticBody2D"]
+script = ExtResource("1_02bpe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-25, 307)
+texture = ExtResource("1_b63tu")
+offset = Vector2(522, -294)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-25, 234)
+shape = SubResource("CapsuleShape2D_0ukfo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tjlal")
+}
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-39, -88)
+emitting = false
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_dthqj")
+texture = ExtResource("4_wk026")
+lifetime = 3.0
+one_shot = true
+explosiveness = 1.0
+trail_lifetime = 1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_cb117")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="MacaArvore" type="Sprite2D" parent="."]
+position = Vector2(51, -151)
+rotation = 0.199869
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_hepcy")
+offset = Vector2(-314.286, -51.4286)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="finished" from="GPUParticles2D" to="." method="_on_gpu_particles_2d_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

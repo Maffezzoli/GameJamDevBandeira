@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw2mumpw7bxaq"]
+
+[ext_resource type="Script" path="res://grama.gd" id="1_vxpqd"]
+[ext_resource type="Texture2D" uid="uid://cvey7g0288ba6" path="res://Assets/Scenario/grama.png" id="1_xme7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdcw1"]
+size = Vector2(1928, 160)
+
+[node name="GramaFloor" type="StaticBody2D"]
+z_index = -1
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_vxpqd")
+
+[node name="Grama" type="Sprite2D" parent="."]
+position = Vector2(265, 196)
+texture = ExtResource("1_xme7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(268, 658)
+shape = SubResource("RectangleShape2D_mdcw1")

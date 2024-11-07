@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvjeeagwdu2jh"]
+
+[ext_resource type="PackedScene" uid="uid://citkbm27uledr" path="res://Itens/generic_item.tscn" id="1_0t7fd"]
+[ext_resource type="Script" path="res://Itens/flor_roxa.gd" id="2_u1ldi"]
+[ext_resource type="Texture2D" uid="uid://corann2vd2m8q" path="res://Assets/Scenario/flor_roxa.png" id="3_qr74y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xp8y"]
+size = Vector2(27, 67)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5q3r"]
+radius = 41.0488
+
+[sub_resource type="Gradient" id="Gradient_tlrro"]
+offsets = PackedFloat32Array(0, 0.72093)
+colors = PackedColorArray(0.388235, 0, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_akr6j"]
+gradient = SubResource("Gradient_tlrro")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.521368, 0.517094)
+fill_to = Vector2(0.863248, 0.15812)
+
+[node name="FlorRoxa" instance=ExtResource("1_0t7fd")]
+script = ExtResource("2_u1ldi")
+pos_text = Vector2(-32, -110)
+name_ = "SeveaDoPantano"
+current_texture = ExtResource("3_qr74y")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_qr74y")
+offset = Vector2(577.143, -428.571)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_5xp8y")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_n5q3r")
+
+[node name="Label" parent="." index="3"]
+offset_left = -70.0
+offset_top = -72.0
+offset_right = 70.0
+offset_bottom = -49.0
+text = "Sévea Do Pantano"
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="4"]
+energy = 10.0
+texture = SubResource("GradientTexture2D_akr6j")
+texture_scale = 4.0

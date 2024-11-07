@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bkpjd3o6g520a"
+path="res://.godot/imported/analisar_portao.dialogue-5ca5f19c86061c9b98e3c7ef2bf144f8.tres"
+
+[deps]
+
+source_file="res://dialogue/analisar_portao.dialogue"
+dest_files=["res://.godot/imported/analisar_portao.dialogue-5ca5f19c86061c9b98e3c7ef2bf144f8.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cimnsw8u4awse"
+path="res://.godot/imported/mago_1.dialogue-af2320a09c176105f61c9bd978dda1ad.tres"
+
+[deps]
+
+source_file="res://dialogue/mago_1.dialogue"
+dest_files=["res://.godot/imported/mago_1.dialogue-af2320a09c176105f61c9bd978dda1ad.tres"]
+
+[params]
+
+defaults=true

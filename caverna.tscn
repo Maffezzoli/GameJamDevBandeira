@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://xnguju2qtamo"]
+
+[ext_resource type="Texture2D" uid="uid://w7xee35nemmt" path="res://Assets/Scenario/background_cave.png" id="1_0xcf6"]
+[ext_resource type="Script" path="res://main.gd" id="1_ere0b"]
+[ext_resource type="PackedScene" uid="uid://kcfvij5ghifi" path="res://ChaoCaverna.tscn" id="2_p2nxx"]
+[ext_resource type="PackedScene" uid="uid://p2lqf7ocupvj" path="res://Itens/inv_slot.tscn" id="2_xo1my"]
+[ext_resource type="PackedScene" uid="uid://cqhin3e74jphh" path="res://character.tscn" id="3_s3o3x"]
+[ext_resource type="PackedScene" uid="uid://brd2rwu7c313i" path="res://Polvo.tscn" id="4_jbydy"]
+[ext_resource type="PackedScene" uid="uid://dsmfno6h6gs25" path="res://teleportProps/escada.tscn" id="5_uytwj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w2je"]
+size = Vector2(51, 704)
+
+[node name="Caverna" type="Node2D"]
+script = ExtResource("1_ere0b")
+cena = "Caverna"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+
+[node name="BackgroundCave" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2(965, 100)
+texture = ExtResource("1_0xcf6")
+
+[node name="InvSlot" parent="CanvasLayer" instance=ExtResource("2_xo1my")]
+offset_left = 50.0
+offset_top = 501.0
+offset_right = 90.0
+offset_bottom = 541.0
+scale = Vector2(3, 3)
+
+[node name="ChaoCaverna" parent="." instance=ExtResource("2_p2nxx")]
+position = Vector2(701, -45)
+ground_type_str = "rock"
+
+[node name="Character" parent="." instance=ExtResource("3_s3o3x")]
+position = Vector2(238, 452)
+scale = Vector2(0.07, 0.07)
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+position = Vector2(-14.2854, -57.1429)
+scale = Vector2(14.2857, 14.2857)
+zoom = Vector2(1.1, 1.1)
+limit_left = 10
+limit_right = 1925
+limit_bottom = 650
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+
+[node name="Polvo" parent="." instance=ExtResource("4_jbydy")]
+position = Vector2(942, 236)
+scale = Vector2(0.6, 0.6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1941, 342)
+shape = SubResource("RectangleShape2D_3w2je")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-4, 342)
+shape = SubResource("RectangleShape2D_3w2je")
+
+[node name="Escada" parent="." instance=ExtResource("5_uytwj")]
+z_index = 100
+position = Vector2(1683, 147)
+new_scene_path = "res://cena_principal.tscn"
+player_pos = Vector2(512, 520)
+
+[node name="ItensContainer" type="Node2D" parent="."]
+
+[node name="PositionsObjs" type="Node2D" parent="."]

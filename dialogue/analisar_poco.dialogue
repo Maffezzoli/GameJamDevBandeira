@@ -1,0 +1,6 @@
+~ this_is_a_node_title
+set Global.player_anda = false
+Prisioneiro: Esse poço exaura uma aura diferente, talvez ele tenha outras funções além de servir como fonte de água.
+set Global.player_anda = true
+set Global.in_dialog = false
+=> END

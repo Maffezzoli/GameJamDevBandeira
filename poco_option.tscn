@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6kv122cklwl1"]
+
+[ext_resource type="PackedScene" uid="uid://rdwqdn7wcq3j" path="res://action_options.tscn" id="1_ynnpu"]
+[ext_resource type="Script" path="res://poco_option.gd" id="2_eqnci"]
+
+[node name="PocoOption" instance=ExtResource("1_ynnpu")]
+offset_bottom = 99.0
+item_0/text = "1. Analisar"
+script = ExtResource("2_eqnci")

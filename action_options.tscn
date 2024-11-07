@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://rdwqdn7wcq3j"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_loauv"]
+
+[node name="ItemList" type="ItemList"]
+z_index = 4096
+offset_right = 174.0
+offset_bottom = 66.0
+item_count = 2
+icon_mode = 0
+icon_scale = 0.0
+item_0/text = "1. Chutar"
+item_1/text = "2. Sair"
+script = ExtResource("1_loauv")
+
+[connection signal="item_clicked" from="." to="." method="_on_item_clicked"]

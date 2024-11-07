@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4bvoc0hd6i8m"]
+
+[ext_resource type="PackedScene" uid="uid://citkbm27uledr" path="res://Itens/generic_item.tscn" id="1_dbtcy"]
+[ext_resource type="Script" path="res://maca.gd" id="2_dkhhh"]
+[ext_resource type="Texture2D" uid="uid://dom4wv565dvbt" path="res://Assets/Itens/maca_arvore.png" id="3_1i6c8"]
+[ext_resource type="Texture2D" uid="uid://cl3af3g4ea4cc" path="res://Assets/Itens/maca_inv.png" id="3_e4wi0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ll4xt"]
+radius = 22.0227
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gqdeg"]
+radius = 27.0
+
+[node name="Maca" instance=ExtResource("1_dbtcy")]
+script = ExtResource("2_dkhhh")
+name_ = "Maça"
+current_texture = ExtResource("3_e4wi0")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_1i6c8")
+offset = Vector2(-321, -56)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_ll4xt")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_gqdeg")

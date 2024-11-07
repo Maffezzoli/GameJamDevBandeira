@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://ndc273cl1nys"]
+
+[ext_resource type="Texture2D" uid="uid://jqqvtxnpqrr" path="res://Assets/Scenario/folha.png" id="1_v5tj1"]
+[ext_resource type="Script" path="res://leaf_particle.gd" id="2_nfbuv"]
+
+[sub_resource type="Gradient" id="Gradient_dca22"]
+offsets = PackedFloat32Array(0, 0.863955, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i7ue6"]
+gradient = SubResource("Gradient_dca22")
+
+[sub_resource type="Curve" id="Curve_l4kol"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.333333, 1), 0.0, 0.0, 0, 0, Vector2(0.65722, 0.506767), 0.0, 0.0, 0, 0, Vector2(1, 0.996858), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_fqvnp"]
+min_value = -1.0
+_data = [Vector2(0.00291971, 0), 0.0, 0.0, 0, 0, Vector2(0.249635, 1), 0.0, 0.0, 0, 0, Vector2(0.499325, 0.352827), 0.0, 0.0, 0, 0, Vector2(0.757664, 0.993161), 0.0, 0.0, 0, 0, Vector2(1, 0.0152551), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_thglw"]
+curve_x = SubResource("Curve_l4kol")
+curve_y = SubResource("Curve_fqvnp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pnbc0"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(180, 90, 1)
+direction = Vector3(1, 1, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 40.0
+directional_velocity_min = 20.0
+directional_velocity_max = 50.0
+directional_velocity_curve = SubResource("CurveXYZTexture_thglw")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.02
+scale_max = 0.02
+color_ramp = SubResource("GradientTexture1D_i7ue6")
+turbulence_noise_strength = 0.0
+turbulence_noise_scale = 0.8
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_pnbc0")
+texture = ExtResource("1_v5tj1")
+lifetime = 7.0
+one_shot = true
+fixed_fps = 60
+trail_enabled = true
+trail_lifetime = 0.7
+trail_sections = 32
+trail_section_subdivisions = 32
+script = ExtResource("2_nfbuv")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

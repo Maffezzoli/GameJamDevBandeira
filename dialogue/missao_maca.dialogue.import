@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b800i4w6f50tv"
+path="res://.godot/imported/missao_maca.dialogue-daaa9e87ada0d3e0d53aa19d1d6a45a9.tres"
+
+[deps]
+
+source_file="res://dialogue/missao_maca.dialogue"
+dest_files=["res://.godot/imported/missao_maca.dialogue-daaa9e87ada0d3e0d53aa19d1d6a45a9.tres"]
+
+[params]
+
+defaults=true

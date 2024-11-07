@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgswxxnr5kcbv"]
+
+[ext_resource type="PackedScene" uid="uid://4im5oxvqfk53" path="res://builds/generic_build.tscn" id="1_syfe6"]
+[ext_resource type="Texture2D" uid="uid://ipfq8un5dk5q" path="res://Assets/Scenario/portao.png" id="2_k7p6h"]
+[ext_resource type="Script" path="res://builds/portao.gd" id="3_n7nup"]
+[ext_resource type="PackedScene" uid="uid://bxrsf0id3admt" path="res://portao_option.tscn" id="4_10f2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwpgt"]
+size = Vector2(297, 770)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcuhs"]
+size = Vector2(387, 772)
+
+[node name="Portao" instance=ExtResource("1_syfe6")]
+texture = ExtResource("2_k7p6h")
+offset = Vector2(-781, -57)
+script = ExtResource("3_n7nup")
+options = ExtResource("4_10f2f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(60.5, -33)
+shape = SubResource("RectangleShape2D_fwpgt")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(15.5, -32)
+shape = SubResource("RectangleShape2D_lcuhs")

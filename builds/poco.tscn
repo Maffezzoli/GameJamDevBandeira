@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://duxlhbn45e4gk"]
+
+[ext_resource type="PackedScene" uid="uid://4im5oxvqfk53" path="res://builds/generic_build.tscn" id="1_usagt"]
+[ext_resource type="Texture2D" uid="uid://0heciib8dtmf" path="res://Assets/Scenario/poco.png" id="2_ggbfw"]
+[ext_resource type="Script" path="res://builds/poco.gd" id="3_w24fr"]
+[ext_resource type="PackedScene" uid="uid://c6kv122cklwl1" path="res://poco_option.tscn" id="4_icdky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8c3t"]
+size = Vector2(580, 1000)
+
+[node name="Poco" instance=ExtResource("1_usagt")]
+texture = ExtResource("2_ggbfw")
+script = ExtResource("3_w24fr")
+options = ExtResource("4_icdky")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_l8c3t")
+
+[node name="Marker2D" type="Marker2D" parent="." index="1"]
+position = Vector2(15, 154)

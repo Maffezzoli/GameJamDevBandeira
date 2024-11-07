@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://xrmt7uosq2e7"]
+
+[ext_resource type="PackedScene" uid="uid://citkbm27uledr" path="res://Itens/generic_item.tscn" id="1_eh224"]
+[ext_resource type="Script" path="res://flor_amarelo.gd" id="2_pvcld"]
+[ext_resource type="Texture2D" uid="uid://7umw27sf348t" path="res://Assets/Scenario/flor_amarelo.png" id="3_ps05h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldxic"]
+size = Vector2(20, 53)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f6l76"]
+radius = 30.0167
+
+[sub_resource type="Gradient" id="Gradient_1ub0l"]
+offsets = PackedFloat32Array(0, 0.758721)
+colors = PackedColorArray(0.811765, 0.627451, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6unnc"]
+gradient = SubResource("Gradient_1ub0l")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.521368, 0.517094)
+fill_to = Vector2(0.850427, 0.15812)
+
+[node name="Flor_amarela" instance=ExtResource("1_eh224")]
+script = ExtResource("2_pvcld")
+pos_text = Vector2(-8, -113)
+name_ = "AlgodaoAmarelo"
+current_texture = ExtResource("3_ps05h")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_ps05h")
+offset = Vector2(745.714, -445.714)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ldxic")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_f6l76")
+
+[node name="Label" parent="." index="3"]
+offset_left = -67.0
+offset_top = -53.0
+offset_right = 66.0
+offset_bottom = -30.0
+text = "Algodão Amarelo"
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="4"]
+energy = 10.0
+texture = SubResource("GradientTexture2D_6unnc")
+texture_scale = 4.0

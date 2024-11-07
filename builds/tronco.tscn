@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://c38ooc75ow2l"]
+
+[ext_resource type="PackedScene" uid="uid://4im5oxvqfk53" path="res://builds/generic_build.tscn" id="1_asli1"]
+[ext_resource type="Texture2D" uid="uid://cop3bxceftanm" path="res://Assets/Scenario/tronco.png" id="2_na1u0"]
+[ext_resource type="Script" path="res://tronco.gd" id="3_uneee"]
+[ext_resource type="PackedScene" uid="uid://dsv80au265fow" path="res://tronco_options.tscn" id="4_twnpk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jshp4"]
+radius = 96.1353
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u15wo"]
+radius = 47.9797
+height = 184.029
+
+[node name="Tronco" instance=ExtResource("1_asli1")]
+texture = ExtResource("2_na1u0")
+offset = Vector2(-523, -414)
+script = ExtResource("3_uneee")
+contem_chave = false
+options = ExtResource("4_twnpk")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-2, 15)
+rotation = 1.58992
+shape = SubResource("CircleShape2D_jshp4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(-2, 34)
+rotation = 1.57995
+shape = SubResource("CapsuleShape2D_u15wo")
+
+[node name="Marker2D" type="Marker2D" parent="." index="2"]
+position = Vector2(0, -107)

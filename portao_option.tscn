@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxrsf0id3admt"]
+
+[ext_resource type="PackedScene" uid="uid://rdwqdn7wcq3j" path="res://action_options.tscn" id="1_1gue8"]
+[ext_resource type="Script" path="res://portao_option.gd" id="2_0cqle"]
+
+[node name="PortaoOption" instance=ExtResource("1_1gue8")]
+offset_bottom = 99.0
+item_0/text = "1. Analisar"
+script = ExtResource("2_0cqle")

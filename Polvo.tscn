@@ -1,0 +1,2175 @@
+[gd_scene load_steps=26 format=3 uid="uid://brd2rwu7c313i"]
+
+[ext_resource type="Texture2D" uid="uid://wnsfflq24vto" path="res://Assets/Polvo/tentaculo_4.png" id="1_2jm3t"]
+[ext_resource type="Script" path="res://polvo.gd" id="1_4ibn1"]
+[ext_resource type="Texture2D" uid="uid://8da65gr1fhmk" path="res://Assets/Polvo/tentaculo_3.png" id="2_llhcq"]
+[ext_resource type="Texture2D" uid="uid://0f6j1l3e336u" path="res://Assets/Polvo/tentaculo_2.png" id="3_ynfgw"]
+[ext_resource type="Texture2D" uid="uid://dtv3elpde2jx" path="res://Assets/Polvo/tentaculo_1.png" id="4_kqneu"]
+[ext_resource type="Texture2D" uid="uid://bywig441d5yec" path="res://Assets/Polvo/tentaculo_maior_1.png" id="5_e1rvo"]
+[ext_resource type="Texture2D" uid="uid://i68rtkja8aug" path="res://Assets/Polvo/tentaculo_maior_2.png" id="6_3kb2h"]
+[ext_resource type="Texture2D" uid="uid://cie38hbdlsq04" path="res://Assets/Polvo/tentaculo_maior_3.png" id="7_8qss5"]
+[ext_resource type="Texture2D" uid="uid://ciy6bby08gp5y" path="res://Assets/Polvo/tentaculo_maior_4.png" id="8_bepl0"]
+[ext_resource type="Texture2D" uid="uid://drigbgndla2mr" path="res://Assets/Polvo/tentaculo_meio_1.png" id="9_lq1t6"]
+[ext_resource type="Texture2D" uid="uid://lj7mmgr5jj3v" path="res://Assets/Polvo/tentaculo_meio_2.png" id="10_rmsgj"]
+[ext_resource type="Texture2D" uid="uid://dosqc1tqg3khe" path="res://Assets/Polvo/tentaculo_meioleft_2.png" id="11_jhnww"]
+[ext_resource type="Texture2D" uid="uid://vwfils3ewxwe" path="res://Assets/Polvo/tentaculo_meioleft_1.png" id="12_1chq5"]
+[ext_resource type="Texture2D" uid="uid://p7nmhhnseo20" path="res://Assets/Polvo/head.png" id="13_gaa5p"]
+[ext_resource type="Texture2D" uid="uid://da2rplio00pl1" path="res://Assets/Polvo/olhos_1.png" id="14_huopq"]
+[ext_resource type="Texture2D" uid="uid://befbtomeclquy" path="res://Assets/Polvo/olhos_2.png" id="15_vqhn0"]
+[ext_resource type="Texture2D" uid="uid://44b7t7ahsr1o" path="res://Assets/Polvo/olhos_3.png" id="16_1u6i4"]
+[ext_resource type="Texture2D" uid="uid://dhg2ch54blqwv" path="res://Assets/Polvo/olhos_4.png" id="17_c8v5j"]
+[ext_resource type="Texture2D" uid="uid://ct3njv3x6bxmh" path="res://Assets/Polvo/olhos_5.png" id="18_onvx8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fb5wa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q4k83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_huopq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vqhn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1u6i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c8v5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_onvx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c8v5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1u6i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vqhn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_huopq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_xat6u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-90, 241)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft/TentaculoMeioLeft2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-118, 158)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft/TentaculoMeioLeft2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.22409]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Head/TentaculoMeioRight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(92, 207)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Head/TentaculoMeioRight:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-3.14159]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Head/TentaculoMeioRight/TentaculoMeioLeft2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-147, 194)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Head/TentaculoMeioRight/TentaculoMeioLeft2:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.855378]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-8, 150)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.60925]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(116.03, 7.14541)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.37446]
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(32, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(143, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.65605, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2:position:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(183.971, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2:position:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-66.9091, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.19457, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft:position:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-222, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(184, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1:position:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-79, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1:position:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(44, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.76495, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2:position:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(152.324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2:position:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(34.3858, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/26/type = "bezier"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.13286, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/27/type = "bezier"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3:position:x")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-115.551, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/28/type = "bezier"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3:position:y")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(137.073, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/29/type = "bezier"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.56254, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/30/type = "bezier"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Skeleton2D/Head/TentaculoMenorRight:position:x")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(223, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/31/type = "bezier"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Skeleton2D/Head/TentaculoMenorRight:position:y")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(194, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/32/type = "bezier"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Skeleton2D/Head/TentaculoMenorRight:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-3.14159, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/33/type = "bezier"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1:position:x")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-92, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/34/type = "bezier"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1:position:y")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(36, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/35/type = "bezier"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.6657, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/36/type = "bezier"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2:position:x")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(106.229, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/37/type = "bezier"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2:position:y")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-92.3488, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/38/type = "bezier"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2:rotation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.43584, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/39/type = "bezier"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3:position:x")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-105.177, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/40/type = "bezier"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3:position:y")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(107.823, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/41/type = "bezier"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.84092, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/42/type = "bezier"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft:position:x")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-173, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/43/type = "bezier"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft:position:y")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(244, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/44/type = "bezier"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft:rotation")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.55068, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/45/type = "bezier"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2:position:x")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(259.746, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/46/type = "bezier"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2:position:y")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(45.4083, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/47/type = "bezier"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2:rotation")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.63829, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/48/type = "bezier"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:x")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-261.938, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/49/type = "bezier"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:y")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(114.71, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/50/type = "bezier"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3:rotation")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.753366, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/51/type = "bezier"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:x")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(45.3049, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/52/type = "bezier"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:y")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-311.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/53/type = "bezier"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:rotation")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.271403, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/54/type = "bezier"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight:position:x")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(184, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/55/type = "bezier"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight:position:y")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(245, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/56/type = "bezier"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight:rotation")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.637003, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/57/type = "bezier"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2:position:x")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(270.384, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/58/type = "bezier"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2:position:y")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(58.2443, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/59/type = "bezier"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2:rotation")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.56099, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/60/type = "bezier"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:x")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-278.979, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/61/type = "bezier"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:y")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(113.964, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/62/type = "bezier"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3:rotation")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.722376, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/63/type = "bezier"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:x")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(41.1979, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/64/type = "bezier"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:y")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-304.459, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/65/type = "bezier"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:rotation")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.271403, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/66/type = "bezier"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("Skeleton2D/Head/HeadBone:position:x")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/67/type = "bezier"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Skeleton2D/Head/HeadBone:position:y")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-189, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/68/type = "bezier"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("Skeleton2D/Head/HeadBone:rotation")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/69/type = "bezier"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("Polygons/Head/AnimatedSprite2D:position:x")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-11, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/70/type = "bezier"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("Polygons/Head/AnimatedSprite2D:position:y")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(202, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ajbjn"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-90, 241), Vector2(-90, 241), Vector2(-90, 241)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.137761, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft/TentaculoMeioLeft2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-118, 158)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Head/TentaculoMeioLeft/TentaculoMeioLeft2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.22409]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Head/TentaculoMeioRight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(92, 207), Vector2(92, 207), Vector2(92, 207)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Head/TentaculoMeioRight:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.2, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-3.14159, -3.23076, -3.14159]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Head/TentaculoMeioRight/TentaculoMeioLeft2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-147, 194)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Head/TentaculoMeioRight/TentaculoMeioLeft2:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.855378]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-8, 150), Vector2(-8, 150), Vector2(-8, 150)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.60925, 1.73118, 1.60925]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(116.03, 7.14541)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.37446]
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(32, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 2)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(143, -0.25, 0, 0.25, 0, 143, -0.25, 0, 0.25, 0, 143, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 2)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1.65605, -0.25, 0, 0.25, 0, 1.58398, -0.25, 0, 0.25, 0, 1.65605, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 2)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2:position:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(183.971, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2:position:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-66.9091, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.19457, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft:position:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-222, -0.25, 0, 0.25, 0, -222, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(184, -0.25, 0, 0.25, 0, 184, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.163376, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9, 2)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1:position:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-79, -0.25, 0, 0.25, 0, -79, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1:position:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(44, -0.25, 0, 0.25, 0, 44, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-2.76495, -0.25, 0, 0.25, 0, -2.99876, -0.25, 0, 0.25, 0, -2.76495, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9, 2)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2:position:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(152.324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2:position:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(34.3858, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/26/type = "bezier"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.13286, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/27/type = "bezier"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3:position:x")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-115.551, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/28/type = "bezier"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3:position:y")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(137.073, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/29/type = "bezier"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.56254, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/30/type = "bezier"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Skeleton2D/Head/TentaculoMenorRight:position:x")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(223, -0.25, 0, 0.25, 0, 223, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/31/type = "bezier"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Skeleton2D/Head/TentaculoMenorRight:position:y")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(194, -0.25, 0, 0.25, 0, 194, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/32/type = "bezier"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Skeleton2D/Head/TentaculoMenorRight:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-3.14159, -0.25, 0, 0.25, 0, -3.22638, -0.25, 0, 0.25, 0, -3.14159, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9, 2)
+}
+tracks/33/type = "bezier"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1:position:x")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-92, -0.25, 0, 0.25, 0, -92, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/34/type = "bezier"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1:position:y")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(36, -0.25, 0, 0.25, 0, 36, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/35/type = "bezier"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-1.6657, -0.25, 0, 0.25, 0, -1.89631, -0.25, 0, 0.25, 0, -1.6657, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9, 2)
+}
+tracks/36/type = "bezier"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2:position:x")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(106.229, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/37/type = "bezier"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2:position:y")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-92.3488, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/38/type = "bezier"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2:rotation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.43584, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/39/type = "bezier"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3:position:x")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-105.177, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/40/type = "bezier"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3:position:y")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(107.823, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/41/type = "bezier"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.84092, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/42/type = "bezier"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft:position:x")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-173, -0.25, 0, 0.25, 0, -173, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/43/type = "bezier"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft:position:y")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(244, -0.25, 0, 0.25, 0, 244, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/44/type = "bezier"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft:rotation")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(2.55068, -0.25, 0, 0.25, 0, 2.50394, -0.25, 0, 0.25, 0, 2.55068, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1, 2)
+}
+tracks/45/type = "bezier"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2:position:x")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(259.746, -0.25, 0, 0.25, 0, 259.746, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/46/type = "bezier"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2:position:y")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(45.4083, -0.25, 0, 0.25, 0, 45.4083, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/47/type = "bezier"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2:rotation")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-1.63829, -0.25, 0, 0.25, 0, -1.37297, -0.25, 0, 0.25, 0, -1.63829, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1, 2)
+}
+tracks/48/type = "bezier"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:x")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-261.938, -0.25, 0, 0.25, 0, -261.938, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/49/type = "bezier"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:y")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(114.71, -0.25, 0, 0.25, 0, 114.71, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/50/type = "bezier"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3:rotation")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.753366, -0.25, 0, 0.25, 0, -0.974744, -0.25, 0, 0.25, 0, -0.753366, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1, 2)
+}
+tracks/51/type = "bezier"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:x")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(45.3049, -0.25, 0, 0.25, 0, 45.3049, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/52/type = "bezier"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:y")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-311.1, -0.25, 0, 0.25, 0, -311.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/53/type = "bezier"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:rotation")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.271403, -0.25, 0, 0.25, 0, 0.548756, -0.25, 0, 0.25, 0, -0.271403, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 2)
+}
+tracks/54/type = "bezier"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight:position:x")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(184, -0.25, 0, 0.25, 0, 184, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/55/type = "bezier"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight:position:y")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(245, -0.25, 0, 0.25, 0, 245, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/56/type = "bezier"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight:rotation")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.637003, -0.25, 0, 0.25, 0, 0.433327, -0.25, 0, 0.25, 0, 0.637003, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1, 2)
+}
+tracks/57/type = "bezier"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2:position:x")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(270.384, -0.25, 0, 0.25, 0, 270.384, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/58/type = "bezier"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2:position:y")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(58.2443, -0.25, 0, 0.25, 0, 58.2443, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/59/type = "bezier"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2:rotation")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-1.56099, -0.25, 0, 0.25, 0, -1.73942, -0.25, 0, 0.25, 0, -1.56099, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 2)
+}
+tracks/60/type = "bezier"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:x")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-278.979, -0.25, 0, 0.25, 0, -278.979, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/61/type = "bezier"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3:position:y")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(113.964, -0.25, 0, 0.25, 0, 113.964, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/62/type = "bezier"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3:rotation")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.722376, -0.25, 0, 0.25, 0, -0.885051, -0.25, 0, 0.25, 0, -0.722376, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.1, 2)
+}
+tracks/63/type = "bezier"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:x")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(41.1979, -0.25, 0, 0.25, 0, 41.1979, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3)
+}
+tracks/64/type = "bezier"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:position:y")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-304.459, -0.25, 0, 0.25, 0, -304.459, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3)
+}
+tracks/65/type = "bezier"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4:rotation")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.271403, -0.25, 0, 0.25, 0, 0.457245, -0.25, 0, 0.25, 0, -0.271403, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3, 2)
+}
+tracks/66/type = "bezier"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("Skeleton2D/Head/HeadBone:position:x")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/67/type = "bezier"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Skeleton2D/Head/HeadBone:position:y")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-189, -0.25, 0, 0.25, 0, -132, -0.25, 0, 0.25, 0, -189, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/68/type = "bezier"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("Skeleton2D/Head/HeadBone:rotation")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/69/type = "bezier"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("Polygons/Head/AnimatedSprite2D:position:x")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-11, -0.25, 0, 0.25, 0, -11, -0.25, 0, 0.25, 0, -11, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2.1)
+}
+tracks/70/type = "bezier"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("Polygons/Head/AnimatedSprite2D:position:y")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(202, -0.25, 0, 0.25, 0, 227, -0.25, 0, 0.25, 0, 202, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2.1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_264si"]
+_data = {
+"RESET": SubResource("Animation_xat6u"),
+"idle": SubResource("Animation_ajbjn")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ib67x"]
+radius = 599.928
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_4ibn1")
+
+[node name="Polygons" type="Node2D" parent="."]
+
+[node name="TentaculoMenorLeft" type="Node2D" parent="Polygons"]
+position = Vector2(-216, 189)
+
+[node name="tentaculo_menor_left_4" type="Polygon2D" parent="Polygons/TentaculoMenorLeft"]
+material = SubResource("ShaderMaterial_fb5wa")
+position = Vector2(-226, -224)
+offset = Vector2(-508, -337)
+texture = ExtResource("1_2jm3t")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(405.13, 346.393, 437.13, 322.393, 469.13, 306.393, 509.13, 306.393, 509.13, 322.393, 509.13, 378.393, 485.13, 378.393, 453.13, 394.393, 437.13, 418.393, 437.13, 442.393, 461.13, 490.393, 445.13, 498.393, 429.13, 482.393, 389.13, 426.393, 389.13, 370.393, 437.13, 362.393)
+uv = PackedVector2Array(405.13, 346.393, 437.13, 322.393, 469.13, 306.393, 509.13, 306.393, 509.13, 322.393, 509.13, 378.393, 485.13, 378.393, 453.13, 394.393, 437.13, 418.393, 437.13, 442.393, 461.13, 490.393, 445.13, 498.393, 429.13, 482.393, 389.13, 426.393, 389.13, 370.393, 437.13, 362.393)
+polygons = [PackedInt32Array(10, 9, 15, 12, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(14, 0, 1, 2, 15), PackedInt32Array(2, 3, 4, 15), PackedInt32Array(4, 5, 15), PackedInt32Array(15, 5, 6, 7, 8, 9)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_left_3" type="Polygon2D" parent="Polygons/TentaculoMenorLeft"]
+position = Vector2(-183, -54)
+offset = Vector2(-552, -507)
+texture = ExtResource("2_llhcq")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(513.029, 506.117, 553.029, 458.117, 561.029, 426.117, 561.029, 402.117, 545.029, 386.117, 513.029, 378.117, 497.029, 370.117, 497.031, 324.809, 497.031, 300.809, 513.031, 300.809, 553.031, 308.809, 593.031, 324.809, 617.031, 348.809, 633.031, 372.809, 632.848, 408.674, 624.847, 440.674, 600.848, 480.674, 576.847, 512.674, 528.847, 512.674, 568.847, 352.674, 584.847, 456.674)
+uv = PackedVector2Array(513.029, 506.117, 553.029, 458.117, 561.029, 426.117, 561.029, 402.117, 545.029, 386.117, 513.029, 378.117, 497.029, 370.117, 497.031, 324.809, 497.031, 300.809, 513.031, 300.809, 553.031, 308.809, 593.031, 324.809, 617.031, 348.809, 633.031, 372.809, 632.848, 408.674, 624.847, 440.674, 600.848, 480.674, 576.847, 512.674, 528.847, 512.674, 568.847, 352.674, 584.847, 456.674)
+polygons = [PackedInt32Array(0, 18, 17, 20), PackedInt32Array(0, 1, 2, 20), PackedInt32Array(17, 16, 15, 20), PackedInt32Array(8, 19, 6, 7), PackedInt32Array(8, 9, 10, 11, 19), PackedInt32Array(6, 5, 4, 19), PackedInt32Array(4, 3, 19), PackedInt32Array(12, 19, 11), PackedInt32Array(3, 2, 20, 15, 14, 13, 12, 19)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 2
+
+[node name="tentaculo_menor_left_2" type="Polygon2D" parent="Polygons/TentaculoMenorLeft"]
+position = Vector2(-72, 33)
+offset = Vector2(-664, -593)
+texture = ExtResource("3_ynfgw")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(497.117, 515.135, 521.117, 491.135, 577.117, 491.135, 585.117, 523.135, 609.117, 555.135, 649.117, 563.135, 665.117, 571.135, 665.117, 611.135, 665.117, 627.135, 609.117, 635.135, 561.117, 635.135, 505.117, 611.135, 489.117, 579.135, 481.117, 539.135, 561.117, 571.135)
+uv = PackedVector2Array(497.117, 515.135, 521.117, 491.135, 577.117, 491.135, 585.117, 523.135, 609.117, 555.135, 649.117, 563.135, 665.117, 571.135, 665.117, 611.135, 665.117, 627.135, 609.117, 635.135, 561.117, 635.135, 505.117, 611.135, 489.117, 579.135, 481.117, 539.135, 561.117, 571.135)
+polygons = [PackedInt32Array(1, 2, 14), PackedInt32Array(1, 0, 13, 14), PackedInt32Array(13, 12, 11, 14), PackedInt32Array(11, 10, 9, 14), PackedInt32Array(2, 3, 4, 14), PackedInt32Array(4, 5, 14), PackedInt32Array(9, 8, 14), PackedInt32Array(8, 7, 6, 5, 14)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_left_1" type="Polygon2D" parent="Polygons/TentaculoMenorLeft"]
+position = Vector2(2, 0)
+offset = Vector2(-739, -560)
+texture = ExtResource("4_kqneu")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(646.402, 569.234, 702.402, 561.234, 734.402, 529.234, 742.402, 545.234, 750.402, 569.234, 742.402, 585.234, 670.402, 625.234, 646.402, 625.234, 702.402, 585.234)
+uv = PackedVector2Array(646.402, 569.234, 702.402, 561.234, 734.402, 529.234, 742.402, 545.234, 750.402, 569.234, 742.402, 585.234, 670.402, 625.234, 646.402, 625.234, 702.402, 585.234)
+polygons = [PackedInt32Array(0, 8, 2, 1), PackedInt32Array(0, 7, 8), PackedInt32Array(7, 6, 5, 4, 8), PackedInt32Array(8, 4, 3, 2)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMenorRight" type="Node2D" parent="Polygons"]
+position = Vector2(226, 189)
+rotation = 0.0162249
+scale = Vector2(-1, 1)
+
+[node name="tentaculo_menor_left_4" type="Polygon2D" parent="Polygons/TentaculoMenorRight"]
+position = Vector2(-227, -224)
+offset = Vector2(-508, -337)
+texture = ExtResource("1_2jm3t")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(405.13, 346.393, 437.13, 322.393, 469.13, 306.393, 509.13, 306.393, 509.13, 322.393, 509.13, 378.393, 485.13, 378.393, 453.13, 394.393, 437.13, 418.393, 437.13, 442.393, 461.13, 490.393, 445.13, 498.393, 429.13, 482.393, 389.13, 426.393, 389.13, 370.393, 437.13, 362.393)
+uv = PackedVector2Array(405.13, 346.393, 437.13, 322.393, 469.13, 306.393, 509.13, 306.393, 509.13, 322.393, 509.13, 378.393, 485.13, 378.393, 453.13, 394.393, 437.13, 418.393, 437.13, 442.393, 461.13, 490.393, 445.13, 498.393, 429.13, 482.393, 389.13, 426.393, 389.13, 370.393, 437.13, 362.393)
+polygons = [PackedInt32Array(10, 9, 15, 12, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(14, 0, 1, 2, 15), PackedInt32Array(2, 3, 4, 15), PackedInt32Array(4, 5, 15), PackedInt32Array(15, 5, 6, 7, 8, 9)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_left_3" type="Polygon2D" parent="Polygons/TentaculoMenorRight"]
+position = Vector2(-184.164, -52.9949)
+offset = Vector2(-552, -507)
+texture = ExtResource("2_llhcq")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(513.029, 506.117, 553.029, 458.117, 561.029, 426.117, 561.029, 402.117, 545.029, 386.117, 513.029, 378.117, 497.029, 370.117, 497.031, 324.809, 497.031, 300.809, 513.031, 300.809, 553.031, 308.809, 593.031, 324.809, 617.031, 348.809, 633.031, 372.809, 632.848, 408.674, 624.847, 440.674, 600.848, 480.674, 576.847, 512.674, 528.847, 512.674, 568.847, 352.674, 584.847, 456.674)
+uv = PackedVector2Array(513.029, 506.117, 553.029, 458.117, 561.029, 426.117, 561.029, 402.117, 545.029, 386.117, 513.029, 378.117, 497.029, 370.117, 497.031, 324.809, 497.031, 300.809, 513.031, 300.809, 553.031, 308.809, 593.031, 324.809, 617.031, 348.809, 633.031, 372.809, 632.848, 408.674, 624.847, 440.674, 600.848, 480.674, 576.847, 512.674, 528.847, 512.674, 568.847, 352.674, 584.847, 456.674)
+polygons = [PackedInt32Array(0, 18, 17, 20), PackedInt32Array(0, 1, 2, 20), PackedInt32Array(17, 16, 15, 20), PackedInt32Array(8, 19, 6, 7), PackedInt32Array(8, 9, 10, 11, 19), PackedInt32Array(6, 5, 4, 19), PackedInt32Array(4, 3, 19), PackedInt32Array(12, 19, 11), PackedInt32Array(3, 2, 20, 15, 14, 13, 12, 19)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 2
+
+[node name="tentaculo_menor_left_2" type="Polygon2D" parent="Polygons/TentaculoMenorRight"]
+position = Vector2(-72.5421, 32.8274)
+offset = Vector2(-664, -593)
+texture = ExtResource("3_ynfgw")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(497.117, 515.135, 521.117, 491.135, 577.117, 491.135, 585.117, 523.135, 609.117, 555.135, 649.117, 563.135, 665.117, 571.135, 665.117, 611.135, 665.117, 627.135, 609.117, 635.135, 561.117, 635.135, 505.117, 611.135, 489.117, 579.135, 481.117, 539.135, 561.117, 571.135)
+uv = PackedVector2Array(497.117, 515.135, 521.117, 491.135, 577.117, 491.135, 585.117, 523.135, 609.117, 555.135, 649.117, 563.135, 665.117, 571.135, 665.117, 611.135, 665.117, 627.135, 609.117, 635.135, 561.117, 635.135, 505.117, 611.135, 489.117, 579.135, 481.117, 539.135, 561.117, 571.135)
+polygons = [PackedInt32Array(1, 2, 14), PackedInt32Array(1, 0, 13, 14), PackedInt32Array(13, 12, 11, 14), PackedInt32Array(11, 10, 9, 14), PackedInt32Array(2, 3, 4, 14), PackedInt32Array(4, 5, 14), PackedInt32Array(9, 8, 14), PackedInt32Array(8, 7, 6, 5, 14)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_left_1" type="Polygon2D" parent="Polygons/TentaculoMenorRight"]
+position = Vector2(2, 0)
+offset = Vector2(-739, -560)
+texture = ExtResource("4_kqneu")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(646.402, 569.234, 702.402, 561.234, 734.402, 529.234, 742.402, 545.234, 750.402, 569.234, 742.402, 585.234, 670.402, 625.234, 646.402, 625.234, 702.402, 585.234)
+uv = PackedVector2Array(646.402, 569.234, 702.402, 561.234, 734.402, 529.234, 742.402, 545.234, 750.402, 569.234, 742.402, 585.234, 670.402, 625.234, 646.402, 625.234, 702.402, 585.234)
+polygons = [PackedInt32Array(0, 8, 2, 1), PackedInt32Array(0, 7, 8), PackedInt32Array(7, 6, 5, 4, 8), PackedInt32Array(8, 4, 3, 2)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMaiorLeft" type="Node2D" parent="Polygons"]
+position = Vector2(57, 99)
+rotation = 0.157574
+
+[node name="tentaculo_maior_left_1" type="Polygon2D" parent="Polygons/TentaculoMaiorLeft"]
+position = Vector2(-210.368, 186.32)
+offset = Vector2(-770, -626)
+texture = ExtResource("5_e1rvo")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(538.914, 714.307, 577.978, 709.951, 689.978, 661.951, 729.978, 621.951, 737.978, 589.951, 737.978, 573.951, 753.978, 573.951, 785.978, 597.951, 825.978, 605.951, 825.978, 621.951, 801.978, 637.951, 753.978, 677.951, 721.978, 717.951, 681.978, 749.951, 633.978, 781.951, 561.978, 805.951, 689.978, 701.951, 753.039, 640.422)
+uv = PackedVector2Array(537.978, 717.951, 577.978, 709.951, 689.978, 661.951, 729.978, 621.951, 737.978, 589.951, 737.978, 573.951, 753.978, 573.951, 785.978, 597.951, 825.978, 605.951, 825.978, 621.951, 801.978, 637.951, 753.978, 677.951, 721.978, 717.951, 681.978, 749.951, 633.978, 781.951, 561.978, 805.951, 673.978, 701.951, 745.039, 640.422)
+polygons = [PackedInt32Array(0, 16, 15), PackedInt32Array(0, 1, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(14, 13, 16), PackedInt32Array(13, 12, 16), PackedInt32Array(12, 11, 16), PackedInt32Array(1, 2, 16), PackedInt32Array(11, 10, 16), PackedInt32Array(10, 9, 8, 16), PackedInt32Array(7, 8, 16), PackedInt32Array(16, 17, 2), PackedInt32Array(2, 3, 17), PackedInt32Array(3, 4, 5, 6, 17), PackedInt32Array(6, 7, 17)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 2
+
+[node name="tentaculo_maior_left_2" type="Polygon2D" parent="Polygons/TentaculoMaiorLeft"]
+position = Vector2(-423.036, 307.19)
+rotation = 0.112168
+offset = Vector2(-557, -750)
+texture = ExtResource("6_3kb2h")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(304.294, 641.338, 352.294, 673.338, 400.294, 705.338, 472.294, 713.338, 552.294, 713.338, 568.294, 753.338, 584.294, 793.338, 560.294, 801.338, 464.294, 817.338, 376.294, 801.338, 280.294, 745.338, 240.294, 689.338, 416.294, 761.338)
+uv = PackedVector2Array(304.294, 641.338, 352.294, 673.338, 400.294, 705.338, 472.294, 713.338, 552.294, 713.338, 568.294, 753.338, 584.294, 793.338, 560.294, 801.338, 464.294, 817.338, 376.294, 801.338, 280.294, 745.338, 240.294, 689.338, 400.294, 745.338)
+polygons = [PackedInt32Array(0, 11, 12), PackedInt32Array(0, 1, 2, 3, 4, 12), PackedInt32Array(4, 5, 6, 12), PackedInt32Array(6, 12, 11, 10, 9, 8, 7)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_maior_left_3" type="Polygon2D" parent="Polygons/TentaculoMaiorLeft"]
+position = Vector2(-680.776, 214.487)
+rotation = 0.0589735
+offset = Vector2(-291, -687)
+texture = ExtResource("7_8qss5")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(235.978, 448.155, 259.978, 384.155, 355.978, 376.155, 339.978, 416.155, 299.978, 496.155, 275.978, 544.155, 283.978, 584.155, 323.978, 648.155, 267.978, 720.155, 235.978, 704.155, 195.978, 584.155, 243.978, 520.155)
+uv = PackedVector2Array(235.978, 448.155, 259.978, 384.155, 355.978, 376.155, 339.978, 416.155, 299.978, 496.155, 275.978, 544.155, 283.978, 584.155, 323.978, 648.155, 267.978, 720.155, 235.978, 704.155, 195.978, 584.155, 243.978, 520.155)
+polygons = [PackedInt32Array(1, 2, 11), PackedInt32Array(1, 11, 10, 0), PackedInt32Array(10, 9, 11), PackedInt32Array(8, 7, 11, 9), PackedInt32Array(6, 5, 4, 3, 2, 11)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_maior_left_4" type="Polygon2D" parent="Polygons/TentaculoMaiorLeft"]
+position = Vector2(-649.97, -75.9455)
+offset = Vector2(-305, -390)
+texture = ExtResource("8_bepl0")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(151.116, 241.794, 239.116, 217.794, 311.116, 233.794, 359.116, 289.794, 367.116, 345.794, 351.116, 393.794, 303.116, 401.794, 279.116, 401.794, 271.116, 393.794, 263.116, 345.794, 215.116, 313.794, 151.116, 305.794, 119.116, 329.794, 119.116, 369.794, 127.116, 377.794, 183.116, 353.794, 207.116, 361.794, 223.116, 393.794, 215.116, 425.794, 191.116, 449.794, 135.116, 449.794, 87.116, 417.794, 55.116, 353.794, 71.116, 305.794, 213.49, 272.769)
+uv = PackedVector2Array(151.116, 241.794, 239.116, 217.794, 311.116, 233.794, 359.116, 289.794, 367.116, 345.794, 351.116, 393.794, 303.116, 401.794, 279.116, 401.794, 271.116, 393.794, 263.116, 345.794, 215.116, 313.794, 151.116, 305.794, 119.116, 329.794, 119.116, 369.794, 127.116, 377.794, 183.116, 353.794, 207.116, 361.794, 223.116, 393.794, 215.116, 425.794, 191.116, 449.794, 135.116, 449.794, 87.116, 417.794, 55.116, 353.794, 71.116, 305.794, 213.49, 272.769)
+polygons = [PackedInt32Array(8, 3, 4, 5, 6, 7), PackedInt32Array(8, 9, 2, 3), PackedInt32Array(9, 10, 1, 2), PackedInt32Array(10, 11, 0, 1), PackedInt32Array(11, 12, 23, 0), PackedInt32Array(12, 13, 22, 23), PackedInt32Array(13, 14, 21, 22), PackedInt32Array(14, 15, 20, 21), PackedInt32Array(20, 19, 18, 17, 16, 15)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMaiorRight" type="Node2D" parent="Polygons"]
+position = Vector2(-40, 99)
+rotation = -0.15708
+scale = Vector2(-1, 1)
+
+[node name="tentaculo_maior_left_1" type="Polygon2D" parent="Polygons/TentaculoMaiorRight"]
+position = Vector2(-210.368, 186.32)
+offset = Vector2(-770, -626)
+texture = ExtResource("5_e1rvo")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(538.914, 714.307, 577.978, 709.951, 689.978, 661.951, 729.978, 621.951, 737.978, 589.951, 737.978, 573.951, 753.978, 573.951, 785.978, 597.951, 825.978, 605.951, 825.978, 621.951, 801.978, 637.951, 753.978, 677.951, 721.978, 717.951, 681.978, 749.951, 633.978, 781.951, 561.978, 805.951, 689.978, 701.951, 753.039, 640.422)
+uv = PackedVector2Array(537.978, 717.951, 577.978, 709.951, 689.978, 661.951, 729.978, 621.951, 737.978, 589.951, 737.978, 573.951, 753.978, 573.951, 785.978, 597.951, 825.978, 605.951, 825.978, 621.951, 801.978, 637.951, 753.978, 677.951, 721.978, 717.951, 681.978, 749.951, 633.978, 781.951, 561.978, 805.951, 673.978, 701.951, 745.039, 640.422)
+polygons = [PackedInt32Array(0, 16, 15), PackedInt32Array(0, 1, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(14, 13, 16), PackedInt32Array(13, 12, 16), PackedInt32Array(12, 11, 16), PackedInt32Array(1, 2, 16), PackedInt32Array(11, 10, 16), PackedInt32Array(10, 9, 8, 16), PackedInt32Array(7, 8, 16), PackedInt32Array(16, 17, 2), PackedInt32Array(2, 3, 17), PackedInt32Array(3, 4, 5, 6, 17), PackedInt32Array(6, 7, 17)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 2
+
+[node name="tentaculo_menor_left_2" type="Polygon2D" parent="Polygons/TentaculoMaiorRight"]
+position = Vector2(-423.036, 307.19)
+rotation = 0.112168
+offset = Vector2(-557, -750)
+texture = ExtResource("6_3kb2h")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(304.294, 641.338, 352.294, 673.338, 400.294, 705.338, 472.294, 713.338, 552.294, 713.338, 568.294, 753.338, 584.294, 793.338, 560.294, 801.338, 464.294, 817.338, 376.294, 801.338, 280.294, 745.338, 240.294, 689.338, 416.294, 761.338)
+uv = PackedVector2Array(304.294, 641.338, 352.294, 673.338, 400.294, 705.338, 472.294, 713.338, 552.294, 713.338, 568.294, 753.338, 584.294, 793.338, 560.294, 801.338, 464.294, 817.338, 376.294, 801.338, 280.294, 745.338, 240.294, 689.338, 400.294, 745.338)
+polygons = [PackedInt32Array(0, 11, 12), PackedInt32Array(0, 1, 2, 3, 4, 12), PackedInt32Array(4, 5, 6, 12), PackedInt32Array(6, 12, 11, 10, 9, 8, 7)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_left_3" type="Polygon2D" parent="Polygons/TentaculoMaiorRight"]
+position = Vector2(-680.776, 214.487)
+rotation = 0.0589735
+offset = Vector2(-291, -687)
+texture = ExtResource("7_8qss5")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(235.978, 448.155, 259.978, 384.155, 355.978, 376.155, 339.978, 416.155, 299.978, 496.155, 275.978, 544.155, 283.978, 584.155, 323.978, 648.155, 267.978, 720.155, 235.978, 704.155, 195.978, 584.155, 243.978, 520.155)
+uv = PackedVector2Array(235.978, 448.155, 259.978, 384.155, 355.978, 376.155, 339.978, 416.155, 299.978, 496.155, 275.978, 544.155, 283.978, 584.155, 323.978, 648.155, 267.978, 720.155, 235.978, 704.155, 195.978, 584.155, 243.978, 520.155)
+polygons = [PackedInt32Array(1, 2, 11), PackedInt32Array(1, 11, 10, 0), PackedInt32Array(10, 9, 11), PackedInt32Array(8, 7, 11, 9), PackedInt32Array(6, 5, 4, 3, 2, 11)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_left_4" type="Polygon2D" parent="Polygons/TentaculoMaiorRight"]
+position = Vector2(-649.97, -75.9455)
+offset = Vector2(-305, -390)
+texture = ExtResource("8_bepl0")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(151.116, 241.794, 239.116, 217.794, 311.116, 233.794, 359.116, 289.794, 367.116, 345.794, 351.116, 393.794, 303.116, 401.794, 279.116, 401.794, 271.116, 393.794, 263.116, 345.794, 215.116, 313.794, 151.116, 305.794, 119.116, 329.794, 119.116, 369.794, 127.116, 377.794, 183.116, 353.794, 207.116, 361.794, 223.116, 393.794, 215.116, 425.794, 191.116, 449.794, 135.116, 449.794, 87.116, 417.794, 55.116, 353.794, 71.116, 305.794, 213.49, 272.769)
+uv = PackedVector2Array(151.116, 241.794, 239.116, 217.794, 311.116, 233.794, 359.116, 289.794, 367.116, 345.794, 351.116, 393.794, 303.116, 401.794, 279.116, 401.794, 271.116, 393.794, 263.116, 345.794, 215.116, 313.794, 151.116, 305.794, 119.116, 329.794, 119.116, 369.794, 127.116, 377.794, 183.116, 353.794, 207.116, 361.794, 223.116, 393.794, 215.116, 425.794, 191.116, 449.794, 135.116, 449.794, 87.116, 417.794, 55.116, 353.794, 71.116, 305.794, 213.49, 272.769)
+polygons = [PackedInt32Array(8, 3, 4, 5, 6, 7), PackedInt32Array(8, 9, 2, 3), PackedInt32Array(9, 10, 1, 2), PackedInt32Array(10, 11, 0, 1), PackedInt32Array(11, 12, 23, 0), PackedInt32Array(12, 13, 22, 23), PackedInt32Array(13, 14, 21, 22), PackedInt32Array(14, 15, 20, 21), PackedInt32Array(20, 19, 18, 17, 16, 15)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMeioLeft" type="Node2D" parent="Polygons"]
+z_index = -100
+position = Vector2(-36, 39)
+
+[node name="tentaculo_meio_meio_1" type="Polygon2D" parent="Polygons/TentaculoMeioLeft"]
+position = Vector2(-43, 166)
+offset = Vector2(-872, -564)
+texture = ExtResource("9_lq1t6")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(678.475, 743.868, 806.475, 615.868, 830.475, 575.868, 894.475, 543.868, 886.475, 583.868, 886.475, 615.868, 854.475, 695.868, 766.475, 807.868, 798.475, 679.868)
+uv = PackedVector2Array(678.475, 743.868, 806.475, 615.868, 830.475, 575.868, 894.475, 543.868, 886.475, 583.868, 886.475, 615.868, 854.475, 695.868, 766.475, 807.868, 798.475, 679.868)
+polygons = [PackedInt32Array(2, 8, 0, 1), PackedInt32Array(2, 3, 4, 5, 8), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(8, 0, 7)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_meio_2" type="Polygon2D" parent="Polygons/TentaculoMeioLeft"]
+position = Vector2(-168, 370)
+offset = Vector2(-744, -771)
+texture = ExtResource("10_rmsgj")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(585.798, 874.442, 689.798, 730.442, 785.798, 786.442, 761.798, 818.442, 713.798, 890.442, 705.798, 930.442, 657.798, 938.442, 601.798, 914.442, 681.798, 842.442)
+uv = PackedVector2Array(585.798, 874.442, 689.798, 730.442, 785.798, 786.442, 761.798, 818.442, 713.798, 890.442, 705.798, 930.442, 657.798, 938.442, 601.798, 914.442, 681.798, 842.442)
+polygons = [PackedInt32Array(1, 8, 0), PackedInt32Array(1, 2, 8), PackedInt32Array(8, 5, 6, 7, 0), PackedInt32Array(8, 2, 3, 4, 5)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMeioMeioLeft" type="Node2D" parent="Polygons"]
+z_index = -100
+position = Vector2(-5, 377)
+rotation = -0.0656153
+
+[node name="tentaculomeioLeft_1" type="Polygon2D" parent="Polygons/TentaculoMeioMeioLeft"]
+position = Vector2(-13.1869, -226.352)
+rotation = 0.0644158
+offset = Vector2(-917, -524)
+texture = ExtResource("11_jhnww")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(860.312, 721.75, 876.312, 593.75, 876.312, 537.75, 948.312, 489.751, 972.312, 489.751, 964.312, 713.75, 956.312, 737.75, 924.312, 617.75)
+uv = PackedVector2Array(860.312, 721.75, 876.312, 593.75, 876.312, 537.75, 948.312, 489.751, 972.312, 489.751, 964.312, 713.75, 956.312, 737.75, 924.312, 617.75)
+polygons = [PackedInt32Array(2, 7, 0, 1), PackedInt32Array(7, 4, 5, 6), PackedInt32Array(7, 6, 0), PackedInt32Array(7, 2, 3, 4)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculoMeioLeft_2" type="Polygon2D" parent="Polygons/TentaculoMeioMeioLeft"]
+position = Vector2(-25.5793, -37.7584)
+rotation = 0.105636
+offset = Vector2(-917, -713)
+texture = ExtResource("12_1chq5")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(787.115, 908.186, 827.115, 836.186, 859.115, 700.186, 963.115, 716.186, 899.115, 908.186, 867.115, 892.186, 883.115, 812.186)
+uv = PackedVector2Array(787.115, 908.186, 827.115, 836.186, 859.115, 700.186, 963.115, 716.186, 899.115, 908.186, 867.115, 892.186, 883.115, 812.186)
+polygons = [PackedInt32Array(2, 6, 0, 1), PackedInt32Array(2, 3, 6), PackedInt32Array(3, 4, 6), PackedInt32Array(0, 5, 4, 6)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMeioRight" type="Node2D" parent="Polygons"]
+z_index = -100
+position = Vector2(53, 39)
+scale = Vector2(-1, 1)
+
+[node name="tentaculo_meio_meio_1" type="Polygon2D" parent="Polygons/TentaculoMeioRight"]
+position = Vector2(-43, 166)
+offset = Vector2(-872, -564)
+texture = ExtResource("9_lq1t6")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(678.475, 743.868, 806.475, 615.868, 830.475, 575.868, 894.475, 543.868, 886.475, 583.868, 886.475, 615.868, 854.475, 695.868, 766.475, 807.868, 798.475, 679.868)
+uv = PackedVector2Array(678.475, 743.868, 806.475, 615.868, 830.475, 575.868, 894.475, 543.868, 886.475, 583.868, 886.475, 615.868, 854.475, 695.868, 766.475, 807.868, 798.475, 679.868)
+polygons = [PackedInt32Array(2, 8, 0, 1), PackedInt32Array(2, 3, 4, 5, 8), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(8, 0, 7)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 1), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculo_menor_meio_2" type="Polygon2D" parent="Polygons/TentaculoMeioRight"]
+position = Vector2(-168, 370)
+offset = Vector2(-744, -771)
+texture = ExtResource("10_rmsgj")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(585.798, 874.442, 689.798, 730.442, 785.798, 786.442, 761.798, 818.442, 713.798, 890.442, 705.798, 930.442, 657.798, 938.442, 601.798, 914.442, 681.798, 842.442)
+uv = PackedVector2Array(585.798, 874.442, 689.798, 730.442, 785.798, 786.442, 761.798, 818.442, 713.798, 890.442, 705.798, 930.442, 657.798, 938.442, 601.798, 914.442, 681.798, 842.442)
+polygons = [PackedInt32Array(1, 8, 0), PackedInt32Array(1, 2, 8), PackedInt32Array(8, 5, 6, 7, 0), PackedInt32Array(8, 2, 3, 4, 5)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="TentaculoMeioMeioRight" type="Node2D" parent="Polygons"]
+z_index = -100
+position = Vector2(49, 377)
+rotation = 3.07598
+scale = Vector2(1, -1)
+
+[node name="tentaculomeioLeft_1" type="Polygon2D" parent="Polygons/TentaculoMeioMeioRight"]
+position = Vector2(-13.1869, -226.352)
+rotation = 0.0644158
+offset = Vector2(-917, -524)
+texture = ExtResource("11_jhnww")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(860.312, 721.75, 876.312, 593.75, 876.312, 537.75, 948.312, 489.751, 972.312, 489.751, 964.312, 713.75, 956.312, 737.75, 924.312, 617.75)
+uv = PackedVector2Array(860.312, 721.75, 876.312, 593.75, 876.312, 537.75, 948.312, 489.751, 972.312, 489.751, 964.312, 713.75, 956.312, 737.75, 924.312, 617.75)
+polygons = [PackedInt32Array(2, 7, 0, 1), PackedInt32Array(7, 4, 5, 6), PackedInt32Array(7, 6, 0), PackedInt32Array(7, 2, 3, 4)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="tentaculoMeioLeft_2" type="Polygon2D" parent="Polygons/TentaculoMeioMeioRight"]
+position = Vector2(-24.5098, -37.4736)
+rotation = 0.105636
+offset = Vector2(-917, -713)
+texture = ExtResource("12_1chq5")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(787.115, 908.186, 827.115, 836.186, 859.115, 700.186, 963.115, 716.186, 899.115, 908.186, 867.115, 892.186, 883.115, 812.186)
+uv = PackedVector2Array(787.115, 908.186, 827.115, 836.186, 859.115, 700.186, 963.115, 716.186, 899.115, 908.186, 867.115, 892.186, 883.115, 812.186)
+polygons = [PackedInt32Array(2, 6, 0, 1), PackedInt32Array(2, 3, 6), PackedInt32Array(3, 4, 6), PackedInt32Array(0, 5, 4, 6)]
+bones = ["Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Head/HeadBone", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="Head" type="Polygon2D" parent="Polygons"]
+position = Vector2(19, -17)
+offset = Vector2(-970, -353)
+texture = ExtResource("13_gaa5p")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(629, 159.841, 679.324, 44.985, 711.324, 4.98497, 751.324, -3.01503, 1175.32, -3.01503, 1207.32, 12.985, 1231.32, 44.985, 1255.32, 92.985, 1289.52, 159.877, 1313.52, 215.877, 1321.52, 263.877, 1297.52, 319.877, 1257.52, 391.877, 1217.52, 439.877, 1225.52, 455.877, 1225.88, 488.835, 1193.88, 536.834, 1185.88, 552.835, 1169.88, 600.834, 1137.88, 624.835, 1081.88, 616.834, 1009.88, 560.835, 969.879, 512.835, 953.879, 512.835, 897.879, 560.835, 841.879, 616.834, 777.879, 616.834, 737.879, 592.834, 721.879, 536.834, 697.879, 488.835, 689.879, 472.835, 705.879, 440.835, 647.572, 367.522, 599.572, 271.522, 961.666, 257.896)
+uv = PackedVector2Array(629, 159.841, 679.324, 44.985, 711.324, 4.98497, 751.324, -3.01503, 1175.32, -3.01503, 1207.32, 12.985, 1231.32, 44.985, 1255.32, 92.985, 1289.52, 159.877, 1313.52, 215.877, 1321.52, 263.877, 1297.52, 319.877, 1257.52, 391.877, 1217.52, 439.877, 1225.52, 455.877, 1225.88, 488.835, 1193.88, 536.834, 1185.88, 552.835, 1169.88, 600.834, 1137.88, 624.835, 1081.88, 616.834, 1009.88, 560.835, 969.879, 512.835, 953.879, 512.835, 897.879, 560.835, 841.879, 616.834, 777.879, 616.834, 737.879, 592.834, 721.879, 536.834, 697.879, 488.835, 689.879, 472.835, 705.879, 440.835, 647.572, 367.522, 599.572, 271.522, 961.666, 257.896)
+polygons = [PackedInt32Array(2, 34, 0, 1), PackedInt32Array(2, 34, 4, 3), PackedInt32Array(4, 5, 6, 7, 8, 34), PackedInt32Array(8, 9, 10, 11, 34), PackedInt32Array(34, 11, 12, 13), PackedInt32Array(34, 14, 13), PackedInt32Array(34, 14, 15, 16, 17), PackedInt32Array(17, 18, 19, 20, 34), PackedInt32Array(20, 21, 22, 34), PackedInt32Array(22, 23, 34), PackedInt32Array(23, 24, 25, 34), PackedInt32Array(25, 26, 27, 28, 34), PackedInt32Array(28, 29, 30, 31, 34), PackedInt32Array(31, 32, 33, 0, 34)]
+bones = ["Head", PackedFloat32Array(1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 1, 0.5, 1, 1, 1, 1, 1, 1, 0.5), "Head/TentaculoMenorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2/TentaculoMenorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2/TentaculoMenorRight3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3/TentaculoMaiorLeft4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioLeft/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioRight/TentaculoMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioLeft/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/TentaculoMeioMeioRight/TentaculoMeioMeioLeft2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBone", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5)]
+internal_vertex_count = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Polygons/Head"]
+position = Vector2(-11, 202)
+sprite_frames = SubResource("SpriteFrames_q4k83")
+frame = 8
+frame_progress = 1.0
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Head" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="TentaculoMenorLeft" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(-222, 184)
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(1, 0, 0, 1, -222, 184)
+
+[node name="TentaculoMenorLeft1" type="Bone2D" parent="Skeleton2D/Head/TentaculoMenorLeft"]
+position = Vector2(-79, 44)
+rotation = -2.76495
+scale = Vector2(1, 1)
+rest = Transform2D(-0.929906, -0.367798, 0.367798, -0.929906, -79, 44)
+
+[node name="TentaculoMenorLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1"]
+position = Vector2(152.324, 34.3858)
+rotation = -1.13286
+rest = Transform2D(0.424073, -0.905628, 0.905628, 0.424073, 152.324, 34.3858)
+
+[node name="TentaculoMenorLeft3" type="Bone2D" parent="Skeleton2D/Head/TentaculoMenorLeft/TentaculoMenorLeft1/TentaculoMenorLeft2"]
+position = Vector2(-115.551, 137.073)
+rotation = -2.56254
+rest = Transform2D(-0.836982, -0.54723, 0.54723, -0.836982, -115.551, 137.073)
+auto_calculate_length_and_angle = false
+length = 128.0
+bone_angle = -132.617
+
+[node name="TentaculoMenorRight" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(223, 194)
+rotation = -3.14159
+scale = Vector2(1, -1)
+rest = Transform2D(-1, -1.50996e-07, -1.50996e-07, 1, 223, 194)
+
+[node name="TentaculoMenorRight1" type="Bone2D" parent="Skeleton2D/Head/TentaculoMenorRight"]
+position = Vector2(-92, 36)
+rotation = -1.6657
+rest = Transform2D(-0.0947639, -0.9955, 0.9955, -0.0947639, -92, 36)
+
+[node name="TentaculoMenorRight2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1"]
+position = Vector2(106.229, -92.3488)
+rotation = -2.43584
+rest = Transform2D(-0.761126, -0.648604, 0.648604, -0.761126, 106.229, -92.3488)
+
+[node name="TentaculoMenorRight3" type="Bone2D" parent="Skeleton2D/Head/TentaculoMenorRight/TentaculoMenorRight1/TentaculoMenorRight2"]
+position = Vector2(-105.177, 107.823)
+rotation = 2.84092
+rest = Transform2D(-0.955138, 0.296162, -0.296162, -0.955138, -105.177, 107.823)
+auto_calculate_length_and_angle = false
+length = 128.0
+bone_angle = -108.216
+
+[node name="TentaculoMaiorLeft" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(-173, 244)
+rotation = 2.55068
+rest = Transform2D(-0.830435, 0.557115, -0.557115, -0.830435, -173, 244)
+
+[node name="TentaculoMaiorLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMaiorLeft"]
+position = Vector2(259.746, 45.4083)
+rotation = -1.63829
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(-0.0674402, -0.997723, 0.997723, -0.0674402, 259.746, 45.4083)
+
+[node name="TentaculoMaiorLeft3" type="Bone2D" parent="Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2"]
+position = Vector2(-261.938, 114.71)
+rotation = -0.753366
+rest = Transform2D(0.72939, -0.684098, 0.684098, 0.72939, -261.938, 114.71)
+
+[node name="TentaculoMaiorLeft4" type="Bone2D" parent="Skeleton2D/Head/TentaculoMaiorLeft/TentaculoMaiorLeft2/TentaculoMaiorLeft3"]
+position = Vector2(45.3049, -311.1)
+rotation = -0.271403
+rest = Transform2D(0.963396, -0.268083, 0.268083, 0.963396, 45.3049, -311.1)
+auto_calculate_length_and_angle = false
+length = 128.0
+bone_angle = -43.1647
+
+[node name="TentaculoMaiorRight" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(184, 245)
+rotation = 0.637003
+scale = Vector2(1, -1)
+rest = Transform2D(0.803882, 0.594789, 0.594789, -0.803882, 184, 245)
+
+[node name="TentaculoMaiorLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMaiorRight"]
+position = Vector2(270.384, 58.2443)
+rotation = -1.56099
+scale = Vector2(0.999998, 0.999998)
+rest = Transform2D(0.00980774, -0.999952, 0.999952, 0.00980774, 270.384, 58.2443)
+
+[node name="TentaculoMaiorLeft3" type="Bone2D" parent="Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2"]
+position = Vector2(-278.979, 113.964)
+rotation = -0.722376
+rest = Transform2D(0.750237, -0.661169, 0.661169, 0.750237, -278.979, 113.964)
+
+[node name="TentaculoMaiorLeft4" type="Bone2D" parent="Skeleton2D/Head/TentaculoMaiorRight/TentaculoMaiorLeft2/TentaculoMaiorLeft3"]
+position = Vector2(41.1979, -304.459)
+rotation = -0.271403
+rest = Transform2D(0.963396, -0.268083, 0.268083, 0.963396, 41.1979, -304.459)
+auto_calculate_length_and_angle = false
+length = 128.0
+bone_angle = -43.1647
+
+[node name="TentaculoMeioLeft" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(-90, 241)
+rest = Transform2D(1, 0, 0, 1, -97, 249)
+
+[node name="TentaculoMeioLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMeioLeft"]
+position = Vector2(-118, 158)
+rotation = 2.22409
+rest = Transform2D(-0.607805, 0.794087, -0.794087, -0.607805, -118, 158)
+auto_calculate_length_and_angle = false
+length = 180.0
+bone_angle = 0.0
+
+[node name="TentaculoMeioRight" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(92, 207)
+rotation = -3.14159
+scale = Vector2(1, -1)
+rest = Transform2D(-1, -8.74228e-08, -8.74228e-08, 1, 92, 207)
+
+[node name="TentaculoMeioLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMeioRight"]
+position = Vector2(-147, 194)
+rotation = -0.855378
+rest = Transform2D(0.655933, -0.754819, 0.754819, 0.655933, -147, 194)
+auto_calculate_length_and_angle = false
+length = 180.0
+bone_angle = 0.0
+
+[node name="TentaculoMeioMeioLeft" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(-8, 150)
+rotation = 1.60925
+scale = Vector2(0.999998, 0.999998)
+rest = Transform2D(-0.0384403, 0.999261, -0.999261, -0.0384403, -8, 150)
+
+[node name="TentaculoMeioMeioLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMeioMeioLeft"]
+position = Vector2(116.03, 7.14541)
+rotation = -1.37446
+rest = Transform2D(0.195079, -0.980788, 0.980788, 0.195079, 116.03, 7.14541)
+auto_calculate_length_and_angle = false
+length = 128.0
+bone_angle = 94.8849
+
+[node name="TentaculoMeioMeioRight" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(32, 143)
+rotation = 1.65605
+scale = Vector2(0.999998, 0.999998)
+rest = Transform2D(-0.0851552, 0.996368, -0.996368, -0.0851552, 32, 143)
+
+[node name="TentaculoMeioMeioLeft2" type="Bone2D" parent="Skeleton2D/Head/TentaculoMeioMeioRight"]
+position = Vector2(183.971, -66.9091)
+rotation = -2.19457
+rest = Transform2D(-0.584101, -0.81168, 0.81168, -0.584101, 183.971, -66.9091)
+auto_calculate_length_and_angle = false
+length = 128.0
+bone_angle = 94.8849
+
+[node name="HeadBone" type="Bone2D" parent="Skeleton2D/Head"]
+position = Vector2(2, -189)
+rest = Transform2D(1, 0, 0, 1, 2, -189)
+
+[node name="left" type="Marker2D" parent="."]
+position = Vector2(283, 72)
+
+[node name="right" type="Marker2D" parent="."]
+position = Vector2(-259, 83)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_264si")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ib67x")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

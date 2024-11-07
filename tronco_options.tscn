@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsv80au265fow"]
+
+[ext_resource type="PackedScene" uid="uid://rdwqdn7wcq3j" path="res://action_options.tscn" id="1_wtffb"]
+[ext_resource type="Script" path="res://tronco_options.gd" id="2_qqxcn"]
+
+[node name="TroncoOptions" instance=ExtResource("1_wtffb")]
+item_0/text = "1. Vasculhar"
+script = ExtResource("2_qqxcn")

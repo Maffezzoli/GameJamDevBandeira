@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl5eghfa77fa7"]
+
+[ext_resource type="PackedScene" uid="uid://citkbm27uledr" path="res://Itens/generic_item.tscn" id="1_jracl"]
+[ext_resource type="Script" path="res://chave.gd" id="2_0wxrj"]
+[ext_resource type="Texture2D" uid="uid://v5i55ijwfbgu" path="res://Assets/Itens/chave.png" id="3_4vtns"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q7p1u"]
+radius = 6.0
+height = 82.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcevb"]
+radius = 6.0
+height = 80.0
+
+[node name="Chave" instance=ExtResource("1_jracl")]
+script = ExtResource("2_0wxrj")
+pos_text = Vector2(-13, 1)
+name_ = "Chave"
+current_texture = ExtResource("3_4vtns")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_4vtns")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_q7p1u")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_dcevb")
+
+[node name="Label" parent="." index="3"]
+offset_left = -66.0
+offset_top = -64.0
+offset_right = 67.0
+offset_bottom = -41.0
+text = "Chave Misteriosa"

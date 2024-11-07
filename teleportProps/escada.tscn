@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsmfno6h6gs25"]
+
+[ext_resource type="PackedScene" uid="uid://be42y6susm6" path="res://generic_teleport.tscn" id="1_2lck1"]
+[ext_resource type="Texture2D" uid="uid://cxndudouhhue8" path="res://Assets/Scenario/escada_caverna.png" id="2_06kxn"]
+[ext_resource type="PackedScene" uid="uid://qwesk4gqjkyd" path="res://loading_screen.tscn" id="3_oav8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opibf"]
+size = Vector2(314, 1296)
+
+[node name="Escada" instance=ExtResource("1_2lck1")]
+texture = ExtResource("2_06kxn")
+offset = Vector2(-594, 6)
+loading_screen = ExtResource("3_oav8w")
+
+[node name="Area2D" parent="." index="0"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-5.5, 6.5)
+shape = SubResource("RectangleShape2D_opibf")
