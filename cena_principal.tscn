@@ -398,7 +398,7 @@ offset_bottom = 545.0
 scale = Vector2(3, 3)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
-layer = 128
+layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 motion_scale = Vector2(2, 1)
@@ -410,7 +410,7 @@ scale = Vector2(0.6, 0.603704)
 texture = ExtResource("16_m2l54")
 
 [node name="Character" parent="." instance=ExtResource("2_4jals")]
-position = Vector2(271, 475)
+position = Vector2(-1801, 448)
 scale = Vector2(0.07, 0.07)
 jump_strength = -300.0
 
@@ -434,7 +434,7 @@ position = Vector2(-1465, 557)
 position = Vector2(2638, 551)
 
 [node name="AlgodaoAmarelo" type="Marker2D" parent="PositionsObjs"]
-position = Vector2(3387, 543)
+position = Vector2(-1888, 541)
 
 [node name="ItensContainer" type="Node2D" parent="."]
 

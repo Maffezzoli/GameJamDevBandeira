@@ -58,6 +58,6 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 			Global.interacao.erase(self)
 func action():
 	if !Global.progressao["missao_mago"]:
-		DialogueManager.show_dialogue_balloon(load("res://dialogue/mago_1.dialogue"), "this_is_a_node_title")
+		DialogueManager.show_dialogue_balloon(load("res://dialogue/mago_1.dialogue"), "Start")
 	elif Global.progressao["missao_mago"]:
 		DialogueManager.show_dialogue_balloon(load("res://dialogue/mago_1.dialogue"), "Missao")

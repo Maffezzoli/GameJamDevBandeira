@@ -3951,7 +3951,7 @@ bone_angle = 23.2446
 z_index = 1
 position = Vector2(-123.327, -87.4272)
 rotation = 0.0670313
-scale = Vector2(0.99999, 0.99999)
+scale = Vector2(0.999989, 0.999989)
 rest = Transform2D(1, 0, 0, 1, -136.707, -102.021)
 
 [node name="LeftLeg2" type="Bone2D" parent="Skeleton2D/Torso/LeftLeg"]

@@ -1,11 +1,49 @@
-~ this_is_a_node_title
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+~ Start
+set Global.player_anda = false
+Mago: Um belo dia você não acha?
+- Você tem razão
+	Mago: Vivendo tempo o suficiente na floresta, você começa a apreciar.
+	- Você é um mago certo? Consegue me libertar dessa magia estranha?
+		Mago: Eu notei a coleira no seu pescoço, você está sob o controle da joia das correntes, nunca havia visto uma de perto.
+		- Então você pode ajudar? => Libertar
+	- Sair => Termina
+- Um mago, você consegue me libertar? => Libertar
+
+- Sair => Termina
+~ Libertar
+Mago: Eu notei a coleira no seu pescoço, de fato eu posso. Mas preciso que faça algo por mim antes.
+- Do que você precisa?
+	set Global.progressao["missao_mago"] = true
+	Mago: Preciso de uma MAÇA DOURADA, que você pode obter fazendo uma oferenda semelhante ao POÇO, e um ALGODÃO AMARELO BRILHANTE.
+	- Certo, irei coletar o que precisa.
+		Mago: Obrigado, estou velho demais para fazer essas coisas. => Termina
+- Não suporto mais obedecer ordens.
+	Mago: Bom, então boa sorte com seu problema. Caso mude de ideia estarei aqui. => Termina
+~ Missao
+set Global.player_anda = false
+Mago: Trouxe o que preciso?
+if Global.inv["name"] == "MacaDourada" or Global.inv["name"] == "AlgodaoAmarelo":
+	set Global.progressao["igredientes"] += 1
+	if Global.progressao["igredientes"] < 2:
+		- Entregar item
+			do Global.limpa_inv()
+			Mago: Obrigado, agora só falta mais um item.
+		- Sair => Termina
+	elif Global.progressao["igredientes"] == 2:
+		- Entregar item
+			do Global.limpa_inv()
+			Mago: Você conseguiu! Obrigado pela gentileza.
+			Prisioneiro: É claro, agora como pretende me ajudar?
+			Mago: Para você ser livre, precisamos quebrar a magia da joia das correntes. Acredito conseguir com meu cajado.
+			Mago: Um momento...
+			Mago: Dito e feito. Quem quer que seja, não tem mais poder nenhum sobre você agora.
+			- Obrigado
+				Mago: Gentileza gera gentileza jovem, agora um conselho, fuja daqui o quanto antes.
+				Mago: Tem um portão no outro lado da ilha, se eu não me engano a chave foi perdida em algum tronco pelas redondezas.
+				Mago: Tente vasculhar alguns e irá encontrá-la
+				- Obrigado por tudo, irei agora mesmo => Termina
+		- Sair => Termina
+~ Termina
+set Global.player_anda = true
+set Global.in_dialog = false
 => END

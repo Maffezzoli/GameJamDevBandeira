@@ -76,7 +76,7 @@ var spawns = {
 	"Caverna" : false,
 }
 func _input(event: InputEvent) -> void:
-	print(rigidBodyCarrega)
+	print(inv)
 	if Input.is_action_just_pressed("interaction"):
 		if interacao.size() > 0:
 			var priority_item = null
@@ -87,3 +87,11 @@ func _input(event: InputEvent) -> void:
 				priority_item = interacao[interacao.size() - 1]
 			if priority_item.has_method("action"):
 				priority_item.call("action")
+func limpa_inv():
+	inv = {
+		"texture" : null,
+		"item_scene" : null,
+		"item_pos" : Vector2()
+	}
+	inv_slot.texture_rect.texture = null
+	inv_slot.item_scene = null
