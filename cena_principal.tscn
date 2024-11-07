@@ -397,6 +397,22 @@ offset_right = 81.0
 offset_bottom = 545.0
 scale = Vector2(3, 3)
 
+[node name="tempo" type="Label" parent="CanvasLayer"]
+offset_left = 1270.0
+offset_top = 18.0
+offset_right = 1321.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "300"
+
+[node name="tempo_2" type="Label" parent="CanvasLayer"]
+offset_left = 1020.0
+offset_top = 16.0
+offset_right = 1283.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 30
+text = "Tempo restante:"
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
 layer = 1
 

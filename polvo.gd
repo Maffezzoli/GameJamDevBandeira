@@ -72,4 +72,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func action():
 	if !Global.in_dialog:
 		Global.in_dialog = true
-		DialogueManager.show_dialogue_balloon(load("res://dialogue/missao_maca.dialogue"), "this_is_a_node_title")
+		if Global.progressao["missao_maca"] == true and Global.progressao["missao_flor"] == false:
+			DialogueManager.show_dialogue_balloon(load("res://dialogue/missao_maca.dialogue"), "MissaoMaca")
+		elif Global.progressao["missao_maca"] == true and Global.progressao["missao_flor"] == true:
+			DialogueManager.show_dialogue_balloon(load("res://dialogue/missao_maca.dialogue"), "MissaoFlor")
+		else:
+			DialogueManager.show_dialogue_balloon(load("res://dialogue/missao_maca.dialogue"), "Start")

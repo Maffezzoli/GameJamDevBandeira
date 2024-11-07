@@ -1,6 +1,34 @@
-~ this_is_a_node_title
+~ Start
 set Global.player_anda = false
 Mestre: Suba para a superficíe e me traga uma maçã, não tente gracinhas, como você ja sabe essa coleira psionica te prende a mim.
+do Global.inicia_timer()
+set Global.progressao["missao_maca"] = true
+=> termina
+~ MissaoMaca
+set Global.player_anda = false
+Mestre: Você trouxe o que eu pedi?
+if Global.inv["name"] == "Maça":
+	- Entregar Item
+		do Global.limpa_inv()
+		Mestre: Muito bem, não fez mais do que a sua obrigação, preciso de uma Petala De Espinho, vá pegar agora!
+		set Global.progressao["missao_flor"] = true
+		=> termina
+	- Sair => termina
+else:
+	- Sair => termina
+=> termina
+~ MissaoFlor
+set Global.player_anda = false
+Mestre: Voxe trouxe o que eu pedi?
+if Global.inv["name"] == "PetalaDeEspinho":
+	- Entregar Item
+		do Global.limpa_inv()
+		Mestre: Muito bem, agora que ja tenho tudo que preciso, você será descartado como o ser repugnante que é!
+		=> termina
+	- Sair => termina
+else:
+	- Sair => termina
+~ termina
 set Global.player_anda = true
 set Global.in_dialog = false
 => END

@@ -1,7 +1,10 @@
 extends Node
 var player_pos = null
+var cena_caminho
 var progressao = {
 	"cutscene_inicial" : false,
+	"missao_maca" : false,
+	"missao_flor" : false,
 	"maca_coletada" : false,
 	"chave_coletada" : false,
 	"missao_mago" : false,
@@ -75,8 +78,8 @@ var spawns = {
 	"CenaPrincipal" : false,
 	"Caverna" : false,
 }
+var wait_time = 300
 func _input(event: InputEvent) -> void:
-	print(inv)
 	if Input.is_action_just_pressed("interaction"):
 		if interacao.size() > 0:
 			var priority_item = null
@@ -95,3 +98,5 @@ func limpa_inv():
 	}
 	inv_slot.texture_rect.texture = null
 	inv_slot.item_scene = null
+func inicia_timer():
+	cena_caminho.inicia_timer()

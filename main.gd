@@ -6,6 +6,7 @@ extends Node2D
 @onready var character: CharacterBody2D = $Character
 @onready var camera_2d: Camera2D = $Character/Camera2D
 @onready var positions_objs: Node2D = $PositionsObjs
+@onready var tempo: Label = $CanvasLayer/tempo
 
 var objetos_spawn = [
 	preload("res://Itens/flor_roxa.tscn"),
@@ -13,8 +14,13 @@ var objetos_spawn = [
 	preload("res://Itens/flor_amarela.tscn"),
 	preload("res://Itens/maca_dourada.tscn")
 ]
+
 func _ready() -> void:
-	if Global.progressao["cutscene_inicial"]:
+	tempo.text = str(Global.wait_time)
+	if Global.progressao["missao_maca"]:
+		inicia_timer()
+	Global.cena_caminho = self
+	if !Global.progressao["cutscene_inicial"]:
 		DialogueManager.show_dialogue_balloon(load("res://dialogue/main.dialogue"), "this_is_a_node_title")
 		Global.progressao["cutscene_inicial"] = true
 	if Global.player_pos != null:
@@ -49,3 +55,8 @@ func spawna_objetos():
 				"current_scene": get_tree().current_scene.name,
 				"id" : item_id
 				}
+func inicia_timer():
+	await get_tree().create_timer(1).timeout
+	Global.wait_time -= 1
+	tempo.text = str(Global.wait_time)
+	inicia_timer()
